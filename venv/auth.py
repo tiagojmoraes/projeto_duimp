@@ -10,8 +10,7 @@ def authenticate():
     client_id = os.getenv('CLIENT_ID')
     client_secret = os.getenv('CLIENT_SECRET')
     role_type = os.getenv('ROLE_TYPE', 'IMPEXP')
-    base_url = os.getenv('PUCOMEX_BASE_URL', 'https://val.portalunico.siscomex.gov.br/portal')
-    auth_endpoint = f"{base_url}/api/autenticar/chave-acesso"
+    base_url = os.getenv('PUCOMEX_BASE_URL')  
 
     # Define os headers para autenticação
     headers = {
@@ -23,7 +22,7 @@ def authenticate():
 
     try:
         # Faz a requisição POST
-        response = requests.post(auth_endpoint, headers=headers)
+        response = requests.post(base_url, headers=headers)
         response.raise_for_status()  # Levanta exceção se houver erro HTTP
 
         # Extrai os headers de retorno
