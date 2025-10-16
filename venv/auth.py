@@ -9,15 +9,14 @@ def authenticate():
     # Obtém as credenciais do .env
     client_id = os.getenv('CLIENT_ID')
     client_secret = os.getenv('CLIENT_SECRET')
-    role_type = os.getenv('ROLE_TYPE', 'IMPEXP')
+    role_type = os.getenv('ROLE_TYPE')
     base_url = os.getenv('PUCOMEX_BASE_URL')  
 
     # Define os headers para autenticação
     headers = {
         'Client-Id': client_id,
         'Client-Secret': client_secret,
-        'Role-Type': role_type,
-        'Content-Type': 'application/json'
+        'Role-Type': role_type
     }
 
     try:
