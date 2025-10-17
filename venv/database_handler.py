@@ -10,7 +10,6 @@ class DatabaseHandler:
         self.db_path = db_name
         self.conn = sqlite3.connect(self.db_path)
         self.cursor = self.conn.cursor()
-        # print(f"📁 Banco de dados: {os.path.abspath(self.db_path)}")
     
     def extract_specific_fields(self, data):
         """
@@ -76,6 +75,28 @@ class DatabaseHandler:
         
         return items
     
+    def extract_adicoes_items(self, data):
+        """
+        Extrai as adições e itens em formato normalizado - uma linha por item
+        O numeroItem é uma sequência numérica reiniciando a cada adição (1, 2, 3...)
+        """
+        adicoes_items = []
+        
+        adicoes = data.get('adicoes', [])
+        for adicao in adicoes:
+            numero_adicao = adicao.get('numero')
+            itens = adicao.get('itens', [])
+            
+            # Para cada adição, cria itens sequenciais começando do 1
+            for i, item_original in enumerate(itens, 1):
+                item_data = {
+                    'adiciaoNumero': numero_adicao,
+                    'numeroItem': i  # Sequência: 1, 2, 3... para cada adição
+                }
+                adicoes_items.append(item_data)
+        
+        return adicoes_items
+    
     def get_exclude_list(self):
         """
         Lista de exclusão para referência (não usada na extração, apenas para documentação)
@@ -86,7 +107,6 @@ class DatabaseHandler:
             'resultadoAnaliseRisco_resultadoRFB',
             'resultadoAnaliseRisco_resultadoAnuente',
             'documentos',
-            'adicoes',
             'pagamentos',
             'tratamentoAdministrativo',
             'quantidadeItens',
@@ -99,6 +119,15 @@ class DatabaseHandler:
             'carga_motivoSituacaoEspecial',
             'tributos_mercadoria_valorTotalLocalEmbarqueUSD'
         ]
+    
+    def show_excluded_fields_info(self):
+        """Mostra informações sobre campos excluídos"""
+        exclude_list = self.get_exclude_list()
+        print(f"\n📋 LISTA DE EXCLUSÃO ({len(exclude_list)} categorias):")
+        print("-" * 50)
+        for field in sorted(exclude_list):
+            print(f"   ❌ {field}")
+        print("-" * 50)
     
     def create_table_from_data(self, flat_data):
         """Cria a tabela dinamicamente baseada apenas nos campos específicos"""
@@ -117,9 +146,10 @@ class DatabaseHandler:
             
             columns.append(f"{key} {col_type}")
         
-        # Adiciona coluna para JSON completo (opcional)
-        columns.append('json_completo TEXT')
-        
+        # Adiciona colunas para adições e itens
+        columns.append('adiciaoNumero INTEGER')
+        columns.append('numeroItem INTEGER')
+              
         # Cria a tabela
         create_query = f"""
         CREATE TABLE IF NOT EXISTS duimp (
@@ -129,89 +159,106 @@ class DatabaseHandler:
         
         self.cursor.execute(create_query)
         self.conn.commit()
-        print("✅ Tabela 'duimp' criada/verificada com sucesso!")
-        print(f"📊 Total de colunas: {len(columns)}")
-    
+           
     def insert_data(self, json_data):
-        """Insere os dados do JSON na tabela usando apenas campos específicos"""
-        # Extrai apenas os campos específicos
+        """Insere os dados do JSON na tabela criando uma linha por item de adição"""
+        # Extrai os campos específicos básicos
         specific_data = self.extract_specific_fields(json_data)
         
-        # Mostra os campos que serão incluídos
-        self.show_included_fields(specific_data)
+        # Extrai as adições e itens em formato normalizado
+        adicoes_items = self.extract_adicoes_items(json_data)
         
         # Cria a tabela se não existir
         self.create_table_from_data(specific_data)
         
-        # Prepara os dados para inserção
-        columns = list(specific_data.keys())
-        values = list(specific_data.values())
+        inserted_ids = []
         
-        # Adiciona o JSON completo
-        columns.append('json_completo')
-        values.append(json.dumps(json_data, ensure_ascii=False))
+        if not adicoes_items:
+            # Se não houver adições, insere pelo menos uma linha com os dados básicos
+            combined_data = specific_data.copy()
+            combined_data['adiciaoNumero'] = None
+            combined_data['numeroItem'] = None
+            
+            # Prepara os dados para inserção
+            columns = list(combined_data.keys())
+            values = list(combined_data.values())
+                       
+            # Cria a query de inserção
+            placeholders = ', '.join(['?' for _ in values])
+            columns_str = ', '.join(columns)
+            
+            insert_query = f"INSERT INTO duimp ({columns_str}) VALUES ({placeholders})"
+            
+            try:
+                self.cursor.execute(insert_query, values)
+                inserted_ids.append(self.cursor.lastrowid)
+            except sqlite3.Error as e:
+                print(f"❌ Erro ao inserir dados: {e}")
+                return None
+        else:
+            # Para cada item das adições, cria uma linha separada
+            for item_data in adicoes_items:
+                # Combina dados específicos com dados do item
+                combined_data = specific_data.copy()
+                combined_data.update(item_data)
+                
+                # Prepara os dados para inserção
+                columns = list(combined_data.keys())
+                values = list(combined_data.values())
+                                
+                # Cria a query de inserção
+                placeholders = ', '.join(['?' for _ in values])
+                columns_str = ', '.join(columns)
+                
+                insert_query = f"INSERT INTO duimp ({columns_str}) VALUES ({placeholders})"
+                
+                try:
+                    self.cursor.execute(insert_query, values)
+                    inserted_ids.append(self.cursor.lastrowid)
+                except sqlite3.Error as e:
+                    print(f"❌ Erro ao inserir dados do item {item_data.get('numeroItem')}: {e}")
+                    return None
         
-        # Cria a query de inserção
-        placeholders = ', '.join(['?' for _ in values])
-        columns_str = ', '.join(columns)
-        
-        insert_query = f"INSERT INTO duimp ({columns_str}) VALUES ({placeholders})"
-        
+        self.conn.commit()
+        return inserted_ids
+    
+    def show_table_structure(self):
+        """Mostra a estrutura da tabela de forma limpa e organizada"""
         try:
-            self.cursor.execute(insert_query, values)
-            self.conn.commit()
-            print("✅ Dados inseridos com sucesso!")
-            print(f"📝 Registro ID: {self.cursor.lastrowid}")
-            return self.cursor.lastrowid
+            self.cursor.execute("PRAGMA table_info(duimp)")
+            columns = self.cursor.fetchall()
+            
+            print("\n📊 ESTRUTURA DA TABELA 'duimp_data':")
+            print("=" * 55)
+            for col in columns:
+                col_name = col[1]
+                col_type = col[2]
+                
+                # Define ícones específicos para cada tipo de coluna
+                if col_name in ['adiciaoNumero', 'numeroItem']:
+                    icon = "🔥"  # Novos campos
+                elif col_name in ['id', 'data_insercao']:
+                    icon = "⏰"  # Campos de sistema
+                elif 'recolhido' in col_name:
+                    icon = "💰"  # Campos de tributos
+                elif 'duimp' in col_name.lower():
+                    icon = "📝"  # Identificação da DUIMP
+                elif 'cnpj' in col_name.lower():
+                    icon = "🏢"  # Importador
+                elif 'carga' in col_name.lower() or 'frete' in col_name.lower() or 'seguro' in col_name.lower():
+                    icon = "📦"  # Dados de carga
+                else:
+                    icon = "✅"  # Demais campos
+                
+                print(f"  {icon} {col_name:35} {col_type}")
+            
+            print("=" * 55)
+            print(f"🎯 Total de colunas: {len(columns)}")
+            
+            return columns
         except sqlite3.Error as e:
-            print(f"❌ Erro ao inserir dados: {e}")
-            return None
-    
-    def show_included_fields(self, specific_data):
-        """Mostra quais campos estão sendo incluídos"""
-        print(f"\n🎯 CAMPOS ESPECÍFICOS INCLUÍDOS ({len(specific_data)} campos):")
-        print("=" * 70)
-        
-        # Agrupa por categoria para melhor visualização
-        categories = {
-            'Identificação': [],
-            'Importador': [],
-            'Análise de Risco': [],
-            'Carga': [],
-            'Tributos': [],
-            'Tributos Calculados': []
-        }
-        
-        for key, value in specific_data.items():
-            if key.startswith('identificacao_') and not key.startswith('identificacao_importador'):
-                categories['Identificação'].append((key, value))
-            elif key.startswith('importador_'):
-                categories['Importador'].append((key, value))
-            elif key.startswith('resultadoAnaliseRisco_'):
-                categories['Análise de Risco'].append((key, value))
-            elif key.startswith('carga_'):
-                categories['Carga'].append((key, value))
-            elif key.startswith('tributos_mercadoria'):
-                categories['Tributos'].append((key, value))
-            elif key.startswith('tributo_'):
-                categories['Tributos Calculados'].append((key, value))
-        
-        for category, fields in categories.items():
-            if fields:
-                print(f"\n📁 {category}:")
-                for field, value in fields:
-                    print(f"   ✅ {field:45} = {value}")
-        
-        print("=" * 70)
-    
-    def show_excluded_fields_info(self):
-        """Mostra informações sobre campos excluídos"""
-        exclude_list = self.get_exclude_list()
-        print(f"\n📋 LISTA DE EXCLUSÃO ({len(exclude_list)} categorias):")
-        print("-" * 50)
-        for field in sorted(exclude_list):
-            print(f"   ❌ {field}")
-        print("-" * 50)
+            print(f"❌ Erro ao obter estrutura: {e}")
+            return []
     
     def get_all_records(self):
         """Retorna todos os registros da tabela"""
@@ -234,48 +281,25 @@ class DatabaseHandler:
         """Busca um registro específico pelo número da DUIMP"""
         try:
             self.cursor.execute(
-                "SELECT * FROM duimp WHERE identificacao_numero = ?", 
+                "SELECT * FROM duimp WHERE duimpNumero = ?", 
                 (numero_duimp,)
             )
             columns = [description[0] for description in self.cursor.description]
-            row = self.cursor.fetchone()
+            rows = self.cursor.fetchall()
             
-            if row:
-                return dict(zip(columns, row))
-            return None
+            # Converte para lista de dicionários
+            records = []
+            for row in rows:
+                records.append(dict(zip(columns, row)))
+            
+            return records
         except sqlite3.Error as e:
             print(f"❌ Erro ao buscar registro: {e}")
             return None
     
-    def show_table_structure(self):
-        """Mostra a estrutura da tabela"""
-        try:
-            self.cursor.execute("PRAGMA table_info(duimp)")
-            columns = self.cursor.fetchall()
-            
-            print("\n📋 ESTRUTURA DA TABELA 'duimp':")
-            print("=" * 60)
-            for col in columns:
-                col_name = col[1]
-                col_type = col[2]
-                
-                # Destaca colunas de tributos dinâmicos
-                if col_name.startswith('tributo_'):
-                    print(f"  🎯 {col_name:38} {col_type} (TRIBUTO DINÂMICO)")
-                else:
-                    print(f"  ✅ {col_name:38} {col_type}")
-            print("=" * 60)
-            print(f"Total de colunas: {len(columns)}\n")
-            
-            return columns
-        except sqlite3.Error as e:
-            print(f"❌ Erro ao obter estrutura: {e}")
-            return []
-    
     def close(self):
         """Fecha a conexão com o banco de dados"""
         self.conn.close()
-        print("🔒 Conexão com banco de dados fechada.")
 
 
 def find_json_file():
@@ -297,7 +321,6 @@ def find_json_file():
     return None
 
 
-# Função auxiliar para processar o arquivo JSON
 def process_json_file(json_file_path):
     """Lê o arquivo JSON e insere no banco de dados"""
     try:
@@ -306,25 +329,15 @@ def process_json_file(json_file_path):
         
         db = DatabaseHandler()
         
-        # Mostra informações sobre exclusões
-        db.show_excluded_fields_info()
-        
         # Insere os dados (apenas campos específicos)
-        record_id = db.insert_data(data)
+        record_ids = db.insert_data(data)
         
-        if record_id:
+        if record_ids:
             db.show_table_structure()
-            print(f"\n✅ PROCESSAMENTO CONCLUÍDO!")
-            print(f"📊 Número DUIMP: {data.get('identificacao', {}).get('numero', 'N/A')}")
-            
-            # Mostra totais de tributos
-            specific_data = db.extract_specific_fields(data)
-            tributos_total = sum(value for key, value in specific_data.items() 
-                               if key.startswith('tributo_') and value is not None)
-            print(f"💰 Total de tributos recolhidos: R$ {tributos_total:,.2f}")
+            print(f"📈 Total de linhas inseridas: {len(record_ids)}")
         
         db.close()
-        return record_id
+        return record_ids
         
     except FileNotFoundError:
         print(f"❌ Arquivo não encontrado: {json_file_path}")
@@ -342,75 +355,6 @@ if __name__ == "__main__":
     json_file = find_json_file()
     
     if json_file:
-        print(f"🚀 Arquivo encontrado: {json_file}")
         process_json_file(json_file)
     else:
         print("❌ Arquivo api_response.json não encontrado!")
-        
-        # Diagnóstico
-        current_dir = os.getcwd()
-        project_root = os.path.dirname(current_dir) if current_dir.endswith('/venv') else current_dir
-        
-        print(f"\n🔍 Diagnóstico:")
-        print(f"📂 Diretório atual: {current_dir}")
-        print(f"📁 Raiz do projeto: {project_root}")
-        
-        # Tenta criar arquivo de exemplo
-        try:
-            sample_data = {
-                "identificacao": {
-                    "numero": "25BR00001883412",
-                    "versao": 1,
-                    "dataRegistro": "2025-10-09T08:43:49-0300",
-                    "chaveAcesso": "25Nkq000700600",
-                    "importador": {
-                        "ni": "85090033001366"
-                    }
-                },
-                "resultadoAnaliseRisco": {
-                    "canalConsolidado": "VERDE"
-                },
-                "carga": {
-                    "tipoIdentificacaoCarga": "RUC",
-                    "identificacao": "5BRIMP26681388200010000000009972",
-                    "seguro": {
-                        "codigoMoedaNegociada": "BRL",
-                        "valorMoedaNegociada": 86.97
-                    },
-                    "frete": {
-                        "codigoMoedaNegociada": "EUR",
-                        "valorMoedaNegociada": 387.6
-                    }
-                },
-                "tributos": {
-                    "mercadoria": {
-                        "valorTotalLocalEmbarqueBRL": 100395.07
-                    },
-                    "tributosCalculados": [
-                        {
-                            "tipo": "II",
-                            "valoresBRL": {
-                                "recolhido": 16322.14
-                            }
-                        },
-                        {
-                            "tipo": "IPI", 
-                            "valoresBRL": {
-                                "recolhido": 8868.22
-                            }
-                        }
-                    ]
-                }
-            }
-            
-            sample_file = os.path.join(project_root, 'api_response.json')
-            with open(sample_file, 'w', encoding='utf-8') as f:
-                json.dump(sample_data, f, ensure_ascii=False, indent=2)
-            print(f"✅ Arquivo de exemplo criado: {sample_file}")
-            process_json_file(sample_file)
-            
-        except Exception as e:
-            print(f"❌ Erro ao criar arquivo de exemplo: {e}")
-            print(f"\n💡 Solução manual:")
-            print(f"1. Execute: cd {project_root} && python view_response.py")
-            print(f"2. Depois: python venv/database_handler.py")
