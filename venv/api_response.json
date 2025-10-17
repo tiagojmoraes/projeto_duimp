@@ -1,5 +1,5099 @@
-{
-  "numero": "25BR00001883412",
-  "versao": 1,
-  "dataRegistro": "2025-10-09T08:43:49-0300"
-}
+[
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 1
+    },
+    "produto": {
+      "codigo": "45",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "73202010"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "1.28800",
+      "pesoLiquido": "1.28800",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "6.3871429",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "1109.04",
+      "valorMoedaNegociada": "178.84",
+      "frete": {
+        "valorBRL": "78.64"
+      },
+      "seguro": {
+        "valorBRL": "0.96"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 1109.04,
+        "valorAduaneiroBRL": 1188.64
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 190.18,
+            "aReduzir": null,
+            "devido": 190.18,
+            "suspenso": null,
+            "aRecolher": 190.18,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 1188.64,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 190.18,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 134.44,
+            "aReduzir": null,
+            "devido": 134.44,
+            "suspenso": null,
+            "aRecolher": 134.44,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 1378.82,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 134.44,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 24.96,
+            "aReduzir": null,
+            "devido": 24.96,
+            "suspenso": null,
+            "aRecolher": 24.96,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 1188.64,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 24.96,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 114.7,
+            "aReduzir": null,
+            "devido": 114.7,
+            "suspenso": null,
+            "aRecolher": 114.7,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 1188.64,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 114.7,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 2
+    },
+    "produto": {
+      "codigo": "54",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "73202010"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "1.26000",
+      "pesoLiquido": "1.26000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "4.4289286",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "769.02",
+      "valorMoedaNegociada": "124.01",
+      "frete": {
+        "valorBRL": "76.93"
+      },
+      "seguro": {
+        "valorBRL": "0.67"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 769.02,
+        "valorAduaneiroBRL": 846.61
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 135.46,
+            "aReduzir": null,
+            "devido": 135.46,
+            "suspenso": null,
+            "aRecolher": 135.46,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 846.61,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 135.46,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 95.75,
+            "aReduzir": null,
+            "devido": 95.75,
+            "suspenso": null,
+            "aRecolher": 95.75,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 982.07,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 95.75,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 17.78,
+            "aReduzir": null,
+            "devido": 17.78,
+            "suspenso": null,
+            "aRecolher": 17.78,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 846.61,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 17.78,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 81.7,
+            "aReduzir": null,
+            "devido": 81.7,
+            "suspenso": null,
+            "aRecolher": 81.7,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 846.61,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 81.7,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 3
+    },
+    "produto": {
+      "codigo": "53",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "73202010"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "30.00000",
+      "quantidadeMedidaEstatistica": "1.05000",
+      "pesoLiquido": "1.05000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "4.0836667",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "759.72",
+      "valorMoedaNegociada": "122.51",
+      "frete": {
+        "valorBRL": "64.10"
+      },
+      "seguro": {
+        "valorBRL": "0.66"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 759.72,
+        "valorAduaneiroBRL": 824.48
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 131.92,
+            "aReduzir": null,
+            "devido": 131.92,
+            "suspenso": null,
+            "aRecolher": 131.92,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 824.48,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 131.92,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 93.25,
+            "aReduzir": null,
+            "devido": 93.25,
+            "suspenso": null,
+            "aRecolher": 93.25,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 956.4,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 93.25,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 17.31,
+            "aReduzir": null,
+            "devido": 17.31,
+            "suspenso": null,
+            "aRecolher": 17.31,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 824.48,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 17.31,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 79.56,
+            "aReduzir": null,
+            "devido": 79.56,
+            "suspenso": null,
+            "aRecolher": 79.56,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 824.48,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 79.56,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 4
+    },
+    "produto": {
+      "codigo": "52",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "30.00000",
+      "quantidadeMedidaEstatistica": "0.08400",
+      "pesoLiquido": "0.08400",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "5.2563333",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "977.88",
+      "valorMoedaNegociada": "157.69",
+      "frete": {
+        "valorBRL": "5.13"
+      },
+      "seguro": {
+        "valorBRL": "0.85"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 977.88,
+        "valorAduaneiroBRL": 983.86
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 177.09,
+            "aReduzir": null,
+            "devido": 177.09,
+            "suspenso": null,
+            "aRecolher": 177.09,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 983.86,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 177.09,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 113.19,
+            "aReduzir": null,
+            "devido": 113.19,
+            "suspenso": null,
+            "aRecolher": 113.19,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 1160.95,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 113.19,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 20.66,
+            "aReduzir": null,
+            "devido": 20.66,
+            "suspenso": null,
+            "aRecolher": 20.66,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 983.86,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 20.66,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 94.94,
+            "aReduzir": null,
+            "devido": 94.94,
+            "suspenso": null,
+            "aRecolher": 94.94,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 983.86,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 94.94,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 5
+    },
+    "produto": {
+      "codigo": "51",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "112.00000",
+      "quantidadeMedidaEstatistica": "0.66100",
+      "pesoLiquido": "0.66100",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "3.4343750",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "2385.33",
+      "valorMoedaNegociada": "384.65",
+      "frete": {
+        "valorBRL": "40.36"
+      },
+      "seguro": {
+        "valorBRL": "2.07"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 2385.33,
+        "valorAduaneiroBRL": 2427.75
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 437.0,
+            "aReduzir": null,
+            "devido": 437.0,
+            "suspenso": null,
+            "aRecolher": 437.0,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 2427.75,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 437.0,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 279.31,
+            "aReduzir": null,
+            "devido": 279.31,
+            "suspenso": null,
+            "aRecolher": 279.31,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 2864.74,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 279.31,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 50.98,
+            "aReduzir": null,
+            "devido": 50.98,
+            "suspenso": null,
+            "aRecolher": 50.98,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 2427.75,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 50.98,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 234.28,
+            "aReduzir": null,
+            "devido": 234.28,
+            "suspenso": null,
+            "aRecolher": 234.28,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 2427.75,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 234.28,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 6
+    },
+    "produto": {
+      "codigo": "50",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "56.00000",
+      "quantidadeMedidaEstatistica": "0.28000",
+      "pesoLiquido": "0.28000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "6.3557143",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "2207.17",
+      "valorMoedaNegociada": "355.92",
+      "frete": {
+        "valorBRL": "17.09"
+      },
+      "seguro": {
+        "valorBRL": "1.91"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 2207.17,
+        "valorAduaneiroBRL": 2226.18
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 400.71,
+            "aReduzir": null,
+            "devido": 400.71,
+            "suspenso": null,
+            "aRecolher": 400.71,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 2226.18,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 400.71,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 256.12,
+            "aReduzir": null,
+            "devido": 256.12,
+            "suspenso": null,
+            "aRecolher": 256.12,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 2626.89,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 256.12,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 46.75,
+            "aReduzir": null,
+            "devido": 46.75,
+            "suspenso": null,
+            "aRecolher": 46.75,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 2226.18,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 46.75,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 214.83,
+            "aReduzir": null,
+            "devido": 214.83,
+            "suspenso": null,
+            "aRecolher": 214.83,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 2226.18,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 214.83,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 7
+    },
+    "produto": {
+      "codigo": "44",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "64.00000",
+      "quantidadeMedidaEstatistica": "0.28800",
+      "pesoLiquido": "0.28800",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "5.0573438",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "2007.17",
+      "valorMoedaNegociada": "323.67",
+      "frete": {
+        "valorBRL": "17.58"
+      },
+      "seguro": {
+        "valorBRL": "1.74"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 2007.17,
+        "valorAduaneiroBRL": 2026.49
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 364.77,
+            "aReduzir": null,
+            "devido": 364.77,
+            "suspenso": null,
+            "aRecolher": 364.77,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 2026.49,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 364.77,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 233.15,
+            "aReduzir": null,
+            "devido": 233.15,
+            "suspenso": null,
+            "aRecolher": 233.15,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 2391.26,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 233.15,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 42.56,
+            "aReduzir": null,
+            "devido": 42.56,
+            "suspenso": null,
+            "aRecolher": 42.56,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 2026.49,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 42.56,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 195.56,
+            "aReduzir": null,
+            "devido": 195.56,
+            "suspenso": null,
+            "aRecolher": 195.56,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 2026.49,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 195.56,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 8
+    },
+    "produto": {
+      "codigo": "43",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "56.00000",
+      "quantidadeMedidaEstatistica": "0.19000",
+      "pesoLiquido": "0.19000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "4.0626786",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "1410.86",
+      "valorMoedaNegociada": "227.51",
+      "frete": {
+        "valorBRL": "11.60"
+      },
+      "seguro": {
+        "valorBRL": "1.22"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 1410.86,
+        "valorAduaneiroBRL": 1423.68
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 256.26,
+            "aReduzir": null,
+            "devido": 256.26,
+            "suspenso": null,
+            "aRecolher": 256.26,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 1423.68,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 256.26,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 163.79,
+            "aReduzir": null,
+            "devido": 163.79,
+            "suspenso": null,
+            "aRecolher": 163.79,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 1679.94,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 163.79,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 29.9,
+            "aReduzir": null,
+            "devido": 29.9,
+            "suspenso": null,
+            "aRecolher": 29.9,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 1423.68,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 29.9,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 137.39,
+            "aReduzir": null,
+            "devido": 137.39,
+            "suspenso": null,
+            "aRecolher": 137.39,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 1423.68,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 137.39,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 9
+    },
+    "produto": {
+      "codigo": "42",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "124.00000",
+      "quantidadeMedidaEstatistica": "0.67000",
+      "pesoLiquido": "0.67000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "7.1095161",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "5466.94",
+      "valorMoedaNegociada": "881.58",
+      "frete": {
+        "valorBRL": "40.90"
+      },
+      "seguro": {
+        "valorBRL": "4.74"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 5466.94,
+        "valorAduaneiroBRL": 5512.58
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 992.26,
+            "aReduzir": null,
+            "devido": 992.26,
+            "suspenso": null,
+            "aRecolher": 992.26,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 5512.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 992.26,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 634.22,
+            "aReduzir": null,
+            "devido": 634.22,
+            "suspenso": null,
+            "aRecolher": 634.22,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 6504.84,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 634.22,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 115.76,
+            "aReduzir": null,
+            "devido": 115.76,
+            "suspenso": null,
+            "aRecolher": 115.76,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 5512.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 115.76,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 531.96,
+            "aReduzir": null,
+            "devido": 531.96,
+            "suspenso": null,
+            "aRecolher": 531.96,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 5512.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 531.96,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 10
+    },
+    "produto": {
+      "codigo": "41",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "56.00000",
+      "quantidadeMedidaEstatistica": "0.25800",
+      "pesoLiquido": "0.25800",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "11.5491071",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "4010.69",
+      "valorMoedaNegociada": "646.75",
+      "frete": {
+        "valorBRL": "15.75"
+      },
+      "seguro": {
+        "valorBRL": "3.47"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 4010.69,
+        "valorAduaneiroBRL": 4029.92
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 725.39,
+            "aReduzir": null,
+            "devido": 725.39,
+            "suspenso": null,
+            "aRecolher": 725.39,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 4029.92,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 725.39,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 463.64,
+            "aReduzir": null,
+            "devido": 463.64,
+            "suspenso": null,
+            "aRecolher": 463.64,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 4755.31,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 463.64,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 84.63,
+            "aReduzir": null,
+            "devido": 84.63,
+            "suspenso": null,
+            "aRecolher": 84.63,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 4029.92,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 84.63,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 388.89,
+            "aReduzir": null,
+            "devido": 388.89,
+            "suspenso": null,
+            "aRecolher": 388.89,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 4029.92,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 388.89,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 11
+    },
+    "produto": {
+      "codigo": "35",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "39269090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "340.00000",
+      "quantidadeMedidaEstatistica": "3.74000",
+      "pesoLiquido": "3.74000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "5.7588235",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "12142.15",
+      "valorMoedaNegociada": "1958.00",
+      "frete": {
+        "valorBRL": "228.33"
+      },
+      "seguro": {
+        "valorBRL": "10.52"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 12142.15,
+        "valorAduaneiroBRL": 12381.0
+      },
+      "tributosAplicados": [
+        {
+          "tributo": {
+            "codigo": "IPI"
+          },
+          "regime": {
+            "codigo": "1"
+          },
+          "fundamento": {
+            "codigo": "6999"
+          },
+          "atributos": [
+            {
+              "codigo": "ATT_2980",
+              "valor": "XXXX"
+            }
+          ]
+        }
+      ],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 2228.58,
+            "aReduzir": null,
+            "devido": 2228.58,
+            "suspenso": null,
+            "aRecolher": 2228.58,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 12381.0,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 18.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 2228.58,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 1424.43,
+            "aReduzir": null,
+            "devido": 1424.43,
+            "suspenso": null,
+            "aRecolher": 1424.43,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 14609.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.75,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 1424.43,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 260.0,
+            "aReduzir": null,
+            "devido": 260.0,
+            "suspenso": null,
+            "aRecolher": 260.0,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 12381.0,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 260.0,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 1194.77,
+            "aReduzir": null,
+            "devido": 1194.77,
+            "suspenso": null,
+            "aRecolher": 1194.77,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 12381.0,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 1194.77,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 12
+    },
+    "produto": {
+      "codigo": "49",
+      "versao": "2",
+      "niResponsavel": "85090033",
+      "ncm": "84389000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "0.18200",
+      "pesoLiquido": "0.18200",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "4.7221429",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "819.94",
+      "valorMoedaNegociada": "132.22",
+      "frete": {
+        "valorBRL": "11.11"
+      },
+      "seguro": {
+        "valorBRL": "0.71"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 819.94,
+        "valorAduaneiroBRL": 831.76
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 104.8,
+            "aReduzir": null,
+            "devido": 104.8,
+            "suspenso": null,
+            "aRecolher": 104.8,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 831.76,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 12.6,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 104.8,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 30.44,
+            "aReduzir": null,
+            "devido": 30.44,
+            "suspenso": null,
+            "aRecolher": 30.44,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 936.56,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 3.25,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 30.44,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 17.47,
+            "aReduzir": null,
+            "devido": 17.47,
+            "suspenso": null,
+            "aRecolher": 17.47,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 831.76,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 17.47,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 86.92,
+            "aReduzir": null,
+            "devido": 86.92,
+            "suspenso": null,
+            "aRecolher": 86.92,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 831.76,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 10.45,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 86.92,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 13
+    },
+    "produto": {
+      "codigo": "48",
+      "versao": "2",
+      "niResponsavel": "85090033",
+      "ncm": "84389000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "2.00000",
+      "quantidadeMedidaEstatistica": "0.72000",
+      "pesoLiquido": "0.72000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "70.7000000",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "876.86",
+      "valorMoedaNegociada": "141.40",
+      "frete": {
+        "valorBRL": "43.96"
+      },
+      "seguro": {
+        "valorBRL": "0.76"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 876.86,
+        "valorAduaneiroBRL": 921.58
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 116.12,
+            "aReduzir": null,
+            "devido": 116.12,
+            "suspenso": null,
+            "aRecolher": 116.12,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 921.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 12.6,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 116.12,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 33.73,
+            "aReduzir": null,
+            "devido": 33.73,
+            "suspenso": null,
+            "aRecolher": 33.73,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 1037.7,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 3.25,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 33.73,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 19.35,
+            "aReduzir": null,
+            "devido": 19.35,
+            "suspenso": null,
+            "aRecolher": 19.35,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 921.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 19.35,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 96.31,
+            "aReduzir": null,
+            "devido": 96.31,
+            "suspenso": null,
+            "aRecolher": 96.31,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 921.58,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 10.45,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 96.31,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 14
+    },
+    "produto": {
+      "codigo": "40",
+      "versao": "2",
+      "niResponsavel": "85090033",
+      "ncm": "84389000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "2.29600",
+      "pesoLiquido": "2.29600",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "17.4753571",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "3034.36",
+      "valorMoedaNegociada": "489.31",
+      "frete": {
+        "valorBRL": "140.18"
+      },
+      "seguro": {
+        "valorBRL": "2.63"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 3034.36,
+        "valorAduaneiroBRL": 3177.16
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 400.32,
+            "aReduzir": null,
+            "devido": 400.32,
+            "suspenso": null,
+            "aRecolher": 400.32,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 3177.16,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 12.6,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 400.32,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 116.27,
+            "aReduzir": null,
+            "devido": 116.27,
+            "suspenso": null,
+            "aRecolher": 116.27,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 3577.48,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 3.25,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 116.27,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 66.72,
+            "aReduzir": null,
+            "devido": 66.72,
+            "suspenso": null,
+            "aRecolher": 66.72,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 3177.16,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 66.72,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 332.01,
+            "aReduzir": null,
+            "devido": 332.01,
+            "suspenso": null,
+            "aRecolher": 332.01,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 3177.16,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 10.45,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 332.01,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 15
+    },
+    "produto": {
+      "codigo": "39",
+      "versao": "2",
+      "niResponsavel": "85090033",
+      "ncm": "84389000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "0.81200",
+      "pesoLiquido": "0.81200",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "9.7167857",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "1687.19",
+      "valorMoedaNegociada": "272.07",
+      "frete": {
+        "valorBRL": "49.57"
+      },
+      "seguro": {
+        "valorBRL": "1.46"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 1687.19,
+        "valorAduaneiroBRL": 1738.23
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 219.02,
+            "aReduzir": null,
+            "devido": 219.02,
+            "suspenso": null,
+            "aRecolher": 219.02,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 1738.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 12.6,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 219.02,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 63.61,
+            "aReduzir": null,
+            "devido": 63.61,
+            "suspenso": null,
+            "aRecolher": 63.61,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 1957.25,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 3.25,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 63.61,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 36.5,
+            "aReduzir": null,
+            "devido": 36.5,
+            "suspenso": null,
+            "aRecolher": 36.5,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 1738.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 36.5,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 181.65,
+            "aReduzir": null,
+            "devido": 181.65,
+            "suspenso": null,
+            "aRecolher": 181.65,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 1738.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 10.45,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 181.65,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 16
+    },
+    "produto": {
+      "codigo": "38",
+      "versao": "2",
+      "niResponsavel": "85090033",
+      "ncm": "84389000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "7.47600",
+      "pesoLiquido": "7.47600",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "34.5007143",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "5990.58",
+      "valorMoedaNegociada": "966.02",
+      "frete": {
+        "valorBRL": "456.43"
+      },
+      "seguro": {
+        "valorBRL": "5.19"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 5990.58,
+        "valorAduaneiroBRL": 6452.19
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 812.98,
+            "aReduzir": null,
+            "devido": 812.98,
+            "suspenso": null,
+            "aRecolher": 812.98,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 6452.19,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 12.6,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 812.98,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 236.12,
+            "aReduzir": null,
+            "devido": 236.12,
+            "suspenso": null,
+            "aRecolher": 236.12,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 7265.17,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 3.25,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 236.12,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 135.5,
+            "aReduzir": null,
+            "devido": 135.5,
+            "suspenso": null,
+            "aRecolher": 135.5,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 6452.19,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 135.5,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 674.25,
+            "aReduzir": null,
+            "devido": 674.25,
+            "suspenso": null,
+            "aRecolher": 674.25,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 6452.19,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 10.45,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 674.25,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 17
+    },
+    "produto": {
+      "codigo": "37",
+      "versao": "2",
+      "niResponsavel": "85090033",
+      "ncm": "84389000"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "6.72000",
+      "pesoLiquido": "6.72000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "50.7300000",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "8808.57",
+      "valorMoedaNegociada": "1420.44",
+      "frete": {
+        "valorBRL": "410.27"
+      },
+      "seguro": {
+        "valorBRL": "7.63"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 8808.57,
+        "valorAduaneiroBRL": 9226.47
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 1162.54,
+            "aReduzir": null,
+            "devido": 1162.54,
+            "suspenso": null,
+            "aRecolher": 1162.54,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 9226.47,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 12.6,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 1162.54,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 337.64,
+            "aReduzir": null,
+            "devido": 337.64,
+            "suspenso": null,
+            "aRecolher": 337.64,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 10389.01,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 3.25,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 337.64,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 193.76,
+            "aReduzir": null,
+            "devido": 193.76,
+            "suspenso": null,
+            "aRecolher": 193.76,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 9226.47,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 193.76,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 964.17,
+            "aReduzir": null,
+            "devido": 964.17,
+            "suspenso": null,
+            "aRecolher": 964.17,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 9226.47,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 10.45,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 964.17,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 18
+    },
+    "produto": {
+      "codigo": "47",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "73181500"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "5.00000",
+      "quantidadeMedidaEstatistica": "0.31500",
+      "pesoLiquido": "0.31500",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "19.8320000",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "614.92",
+      "valorMoedaNegociada": "99.16",
+      "frete": {
+        "valorBRL": "19.23"
+      },
+      "seguro": {
+        "valorBRL": "0.53"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 614.92,
+        "valorAduaneiroBRL": 634.68
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 101.55,
+            "aReduzir": null,
+            "devido": 101.55,
+            "suspenso": null,
+            "aRecolher": 101.55,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 634.68,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 101.55,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 47.85,
+            "aReduzir": null,
+            "devido": 47.85,
+            "suspenso": null,
+            "aRecolher": 47.85,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 736.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 6.5,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 47.85,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 13.33,
+            "aReduzir": null,
+            "devido": 13.33,
+            "suspenso": null,
+            "aRecolher": 13.33,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 634.68,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 13.33,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 61.25,
+            "aReduzir": null,
+            "devido": 61.25,
+            "suspenso": null,
+            "aRecolher": 61.25,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 634.68,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 61.25,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 19
+    },
+    "produto": {
+      "codigo": "36",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "73181500"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "28.00000",
+      "quantidadeMedidaEstatistica": "1.54000",
+      "pesoLiquido": "1.54000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "19.9671429",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "3467.02",
+      "valorMoedaNegociada": "559.08",
+      "frete": {
+        "valorBRL": "94.02"
+      },
+      "seguro": {
+        "valorBRL": "3.00"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 3467.02,
+        "valorAduaneiroBRL": 3564.04
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 570.25,
+            "aReduzir": null,
+            "devido": 570.25,
+            "suspenso": null,
+            "aRecolher": 570.25,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 3564.04,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 570.25,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 268.73,
+            "aReduzir": null,
+            "devido": 268.73,
+            "suspenso": null,
+            "aRecolher": 268.73,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 4134.29,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 6.5,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 268.73,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 74.84,
+            "aReduzir": null,
+            "devido": 74.84,
+            "suspenso": null,
+            "aRecolher": 74.84,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 3564.04,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 74.84,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 343.93,
+            "aReduzir": null,
+            "devido": 343.93,
+            "suspenso": null,
+            "aRecolher": 343.93,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 3564.04,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 343.93,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 20
+    },
+    "produto": {
+      "codigo": "46",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "84821090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "90.00000",
+      "quantidadeMedidaEstatistica": "90.00000",
+      "pesoLiquido": "7.11000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "58.9601111",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "32906.64",
+      "valorMoedaNegociada": "5306.41",
+      "frete": {
+        "valorBRL": "434.08"
+      },
+      "seguro": {
+        "valorBRL": "28.51"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 32906.64,
+        "valorAduaneiroBRL": 33369.23
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 5339.08,
+            "aReduzir": null,
+            "devido": 5339.08,
+            "suspenso": null,
+            "aRecolher": 5339.08,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 33369.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 5339.08,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 3019.25,
+            "aReduzir": null,
+            "devido": 3019.25,
+            "suspenso": null,
+            "aRecolher": 3019.25,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 38708.31,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 7.8,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 3019.25,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 700.75,
+            "aReduzir": null,
+            "devido": 700.75,
+            "suspenso": null,
+            "aRecolher": 700.75,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 33369.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 700.75,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 3220.13,
+            "aReduzir": null,
+            "devido": 3220.13,
+            "suspenso": null,
+            "aRecolher": 3220.13,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 33369.23,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 3220.13,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "status": "ATIVO",
+    "identificacao": {
+      "numero": "25BR00001883412",
+      "versao": 1,
+      "numeroItem": 21
+    },
+    "produto": {
+      "codigo": "34",
+      "versao": "3",
+      "niResponsavel": "85090033",
+      "ncm": "84821090"
+    },
+    "caracterizacaoImportacao": {
+      "indicador": "IMPORTACAO_DIRETA",
+      "ni": null
+    },
+    "indicadorExportadorFabricante": {
+      "codigo": "EXPORTADOR_IGUAL_FABRICANTE"
+    },
+    "fabricante": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "exportador": {
+      "codigo": "OPE_2",
+      "versao": "1",
+      "niOperador": "85090033",
+      "pais": {
+        "codigo": "DK"
+      }
+    },
+    "indicadorCompradorVendedor": {
+      "codigo": "NAO_HA_VINCULACAO"
+    },
+    "mercadoria": {
+      "tipoAplicacao": {
+        "codigo": "CONSUMO"
+      },
+      "condicao": "NOVA",
+      "unidadeComercial": "PEÇA",
+      "quantidadeComercial": "30.00000",
+      "quantidadeMedidaEstatistica": "30.00000",
+      "pesoLiquido": "2.43000",
+      "moedaNegociada": {
+        "codigo": "EUR"
+      },
+      "valorUnitarioMoedaNegociada": "48.0706667",
+      "descricao": null
+    },
+    "condicaoVenda": {
+      "metodoValoracao": {
+        "codigo": "1"
+      },
+      "incoterm": {
+        "codigo": "EXW",
+        "complemento": null
+      },
+      "valorBRL": "8943.02",
+      "valorMoedaNegociada": "1442.12",
+      "frete": {
+        "valorBRL": "148.36"
+      },
+      "seguro": {
+        "valorBRL": "7.75"
+      },
+      "acrescimosDeducoes": []
+    },
+    "lpcos": [],
+    "certificadoMercosul": [],
+    "declaracoesVinculadas": [],
+    "dadosCambiais": {
+      "coberturaCambial": {
+        "codigo": "ATE_180_DIAS"
+      },
+      "numeroROF": null,
+      "instituicaoFinanciadora": null,
+      "valorCoberturaCambial": null,
+      "motivoSemCobertura": null
+    },
+    "atributosDuimp": [
+      {
+        "codigo": "ATT_10888",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_9332",
+        "valor": "SN"
+      },
+      {
+        "codigo": "ATT_14786",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14785",
+        "valor": "false"
+      },
+      {
+        "codigo": "ATT_14783",
+        "valor": "14"
+      },
+      {
+        "codigo": "ATT_14782",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14781",
+        "valor": null
+      },
+      {
+        "codigo": "ATT_14780",
+        "valor": "99"
+      },
+      {
+        "codigo": "ATT_14520",
+        "valor": "85090033001366"
+      }
+    ],
+    "atributosFundamentoLegalDuimp": null,
+    "dadosInsumoDrawbackIsencao": {
+      "numeroAtoDuimpInsumo": null,
+      "itemAtoDuimpInsumo": null
+    },
+    "tributos": {
+      "mercadoria": {
+        "valorLocalEmbarqueBRL": 8943.02,
+        "valorAduaneiroBRL": 9099.12
+      },
+      "tributosAplicados": [],
+      "tributosCalculados": [
+        {
+          "tipo": "II",
+          "valoresBRL": {
+            "calculado": 1455.86,
+            "aReduzir": null,
+            "devido": 1455.86,
+            "suspenso": null,
+            "aRecolher": 1455.86,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 3,
+            "baseCalculoBRL": 9099.12,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 16.0,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 1455.86,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "IPI",
+          "valoresBRL": {
+            "calculado": 823.29,
+            "aReduzir": null,
+            "devido": 823.29,
+            "suspenso": null,
+            "aRecolher": 823.29,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 6999,
+            "baseCalculoBRL": 10554.98,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 7.8,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 823.29,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "PIS",
+          "valoresBRL": {
+            "calculado": 191.08,
+            "aReduzir": null,
+            "devido": 191.08,
+            "suspenso": null,
+            "aRecolher": 191.08,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 9099.12,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 2.1,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 191.08,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        },
+        {
+          "tipo": "COFINS",
+          "valoresBRL": {
+            "calculado": 878.07,
+            "aReduzir": null,
+            "devido": 878.07,
+            "suspenso": null,
+            "aRecolher": 878.07,
+            "originalDevido": null,
+            "calculadoPagProporcional": null
+          },
+          "memoriaCalculo": {
+            "codigoFundamentoLegalNormal": 1100,
+            "baseCalculoBRL": 9099.12,
+            "baseCalculoEspecificaBRL": null,
+            "baseCalculoReduzidaBRL": null,
+            "percentualReducaoBaseCalculo": null,
+            "tipoAliquota": "AD_VALOREM",
+            "percentualReducaoAliquotaReduzida": null,
+            "valorAliquota": 9.65,
+            "valorAliquotaEspecifica": null,
+            "valorAliquotaReduzida": null,
+            "normal": 878.07,
+            "tributado": null,
+            "percentualPagamento": null
+          }
+        }
+      ]
+    }
+  }
+]
