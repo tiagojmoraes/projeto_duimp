@@ -22,7 +22,6 @@ class ItensDatabaseHandler:
         if identificacao:
             items['duimpNumero'] = identificacao.get('numero')
             items['duimpVersao'] = identificacao.get('versao')
-            items['numeroItem'] = identificacao.get('numeroItem')
         
         # Produto
         produto = item_data.get('produto', {})
@@ -95,18 +94,11 @@ class ItensDatabaseHandler:
                     # Cria campos dinâmicos baseados no tipo de tributo
                     items[f'{tipo}_devido'] = valores_brl.get('devido')
                     items[f'{tipo}_baseCalculoBRL'] = memoria_calculo.get('baseCalculoBRL')
-                    items[f'{tipo}_tipoAliquota'] = memoria_calculo.get('tipoAliquota')
                     items[f'{tipo}_valorAliquota'] = memoria_calculo.get('valorAliquota')
         
         return items
     
     def calculate_adicoes_fields(self, json_data):
-        """
-        Calcula os campos de adição baseados no NCM:
-        - adicaoNumero: começa em 1 e incrementa quando o NCM muda
-        - numeroItemAdicao: contagem de itens por adição (reinicia a cada adição)
-        - numeroItemDuimp: contagem corrida de todos os itens
-        """
         processed_items = []
         current_adicao = 1  # Começa em 1
         current_ncm = None
@@ -144,9 +136,6 @@ class ItensDatabaseHandler:
         return processed_items
     
     def discover_tributo_columns(self, json_data):
-        """
-        Descobre todos os tipos de tributos presentes no JSON para criar colunas dinâmicas
-        """
         tributo_types = set()
         
         for item in json_data:
@@ -161,14 +150,12 @@ class ItensDatabaseHandler:
         return sorted(list(tributo_types))
     
     def create_table(self, tributo_types):
-        """Cria a tabela com colunas fixas e colunas dinâmicas para tributos"""
         # Colunas fixas
         columns = [
             'id INTEGER PRIMARY KEY AUTOINCREMENT',
             'data_insercao TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
             'duimpNumero TEXT',
             'duimpVersao INTEGER',
-            'numeroItem INTEGER',
             'codigoProduto TEXT',
             'versaoProduto TEXT',
             'ncmProduto TEXT',
@@ -187,7 +174,6 @@ class ItensDatabaseHandler:
             'numeroROF TEXT',
             'valorLocalEmbarqueBRL REAL',
             'valorAduaneiroBRL REAL',
-            # NOVOS CAMPOS
             'adicaoNumero INTEGER',
             'numeroItemAdicao INTEGER',
             'numeroItemDuimp INTEGER'
@@ -198,7 +184,6 @@ class ItensDatabaseHandler:
             columns.extend([
                 f'{tributo_type}_devido REAL',
                 f'{tributo_type}_baseCalculoBRL REAL',
-                f'{tributo_type}_tipoAliquota TEXT',
                 f'{tributo_type}_valorAliquota REAL'
             ])
         
@@ -213,18 +198,11 @@ class ItensDatabaseHandler:
         self.conn.commit()
     
     def calculate_peso_percentual(self):
-        """
-        Calcula o percentual de peso para cada item baseado no peso total
-        """
         try:
             # Calcula o peso total de todos os itens
             self.cursor.execute("SELECT SUM(pesoLiquido) FROM itens_data")
-            total_peso = self.cursor.fetchone()[0]
-            
-            if total_peso is None or total_peso == 0:
-                print("❌ Não foi possível calcular o peso percentual - peso total é zero")
-                return
-            
+            total_peso = self.cursor.fetchone()[0]            
+           
             # Atualiza cada registro com o percentual
             self.cursor.execute("SELECT id, pesoLiquido FROM itens_data")
             registros = self.cursor.fetchall()
@@ -298,7 +276,6 @@ class ItensDatabaseHandler:
         return inserted_count
     
     def show_table_structure(self):
-        """Mostra a estrutura da tabela no formato limpo"""
         try:
             self.cursor.execute("PRAGMA table_info(itens_data)")
             columns = self.cursor.fetchall()
@@ -405,9 +382,6 @@ def process_json_file(json_file_path):
             stats = db.get_statistics(data)
             print("\n📈 ESTATÍSTICAS:")
             print(f"   ✅ Itens processados: {inserted_count}/{len(data)}")
-            print(f"   🔥 Total de adições: {stats['total_adicoes']}")
-            print(f"   📊 Máximo de itens por adição: {stats['max_itens_por_adicao']}")
-            print(f"   🎯 Tipos de tributos: {', '.join(stats['tributo_types'])}")
             print(f"   💰 Total valor BRL: R$ {stats['total_valor_brl']:,.2f}")
             print(f"   💰 Total valor aduaneiro: R$ {stats['total_valor_aduaneiro']:,.2f}")
         
@@ -423,7 +397,6 @@ def process_json_file(json_file_path):
     except Exception as e:
         print(f"❌ Erro inesperado: {e}")
         return None
-
 
 if __name__ == "__main__":
     # Procura o arquivo JSON
