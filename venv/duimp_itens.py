@@ -4,17 +4,90 @@ import os
 import sys
 from datetime import datetime
 
+# =============================================================================
+# CONVERTER TABLE JSON (Integrado no mesmo arquivo)
+# =============================================================================
+
+class TableToJsonConverter:
+    def __init__(self, db_path):
+        self.db_path = db_path
+        self.conn = sqlite3.connect(db_path)
+        self.conn.row_factory = sqlite3.Row
+        self.cursor = self.conn.cursor()
+    
+    def convert_table_to_json(self, table_name, exclude_columns=None):
+        if exclude_columns is None:
+            exclude_columns = ['table_json']  # Exclui table_json por padrão
+            
+        try:
+            self.cursor.execute(f"SELECT * FROM {table_name}")
+            rows = self.cursor.fetchall()
+            
+            data = []
+            for row in rows:
+                record = {}
+                for key in row.keys():
+                    if key in exclude_columns:
+                        continue
+                    
+                    value = row[key]
+                    if isinstance(value, bytes):
+                        value = value.decode('utf-8', errors='ignore')
+                    elif isinstance(value, datetime):
+                        value = value.isoformat()
+                    record[key] = value
+                data.append(record)
+            
+            result = {
+                "metadata": {
+                    "table_name": table_name
+                },
+                "data": data
+            }
+            
+            return result
+            
+        except sqlite3.Error as e:
+            print(f"❌ Erro ao converter tabela {table_name}: {e}")
+            return None
+    
+    def convert_table_to_json_string(self, table_name, exclude_columns=None):
+        json_data = self.convert_table_to_json(table_name, exclude_columns)
+        if json_data:
+            return json.dumps(json_data, ensure_ascii=False, indent=2)
+        return None
+    
+    def close(self):
+        self.conn.close()
+
+def get_table_json(db_path, table_name, exclude_columns=None):
+    converter = TableToJsonConverter(db_path)
+    json_string = converter.convert_table_to_json_string(table_name, exclude_columns)
+    converter.close()
+    return json_string
+
+# =============================================================================
+# ITENS DATABASE HANDLER (Atualizado com table_json)
+# =============================================================================
+
 class ItensDatabaseHandler:
-    def __init__(self, db_name='itens_data.db'):
+    def __init__(self, db_name='duimp_itens.db'):
         """Inicializa a conexão com o banco de dados SQLite"""
         self.db_path = db_name
         self.conn = sqlite3.connect(self.db_path)
         self.cursor = self.conn.cursor()
     
+    def get_codigo_forn_logix(self, codigo_exportador):
+        """
+        Define o código do fornecedor LOGIX baseado no código do exportador
+        Se codigoExportador for "OPE_2" retorna "104629", senão "Cadastrar código do Fornecedor"
+        """
+        if codigo_exportador == "OPE_2":
+            return "104629"
+        else:
+            return "Cadastrar código do Fornecedor"
+    
     def extract_fields(self, item_data):
-        """
-        Extrai os campos específicos conforme a lista fornecida
-        """
         items = {}
         
         # Identificação
@@ -33,7 +106,10 @@ class ItensDatabaseHandler:
         # Exportador
         exportador = item_data.get('exportador', {})
         if exportador:
-            items['codigoExportador'] = exportador.get('codigo')
+            codigo_exportador = exportador.get('codigo')
+            items['codigoExportador'] = codigo_exportador
+            # NOVO CAMPO: codigoFornLOGIX
+            items['codigoFornLOGIX'] = self.get_codigo_forn_logix(codigo_exportador)
         
         # Mercadoria
         mercadoria = item_data.get('mercadoria', {})
@@ -150,16 +226,17 @@ class ItensDatabaseHandler:
         return sorted(list(tributo_types))
     
     def create_table(self, tributo_types):
-        # Colunas fixas
+        # Colunas fixas - COM A NOVA COLUNA table_json
         columns = [
             'id INTEGER PRIMARY KEY AUTOINCREMENT',
-            'data_insercao TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
+            'dataInsercao TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
             'duimpNumero TEXT',
             'duimpVersao INTEGER',
             'codigoProduto TEXT',
             'versaoProduto TEXT',
             'ncmProduto TEXT',
             'codigoExportador TEXT',
+            'codigoFornLOGIX TEXT',
             'quantidadeItem REAL',
             'pesoLiquido REAL',
             'pesoPercentual REAL',
@@ -176,7 +253,8 @@ class ItensDatabaseHandler:
             'valorAduaneiroBRL REAL',
             'adicaoNumero INTEGER',
             'numeroItemAdicao INTEGER',
-            'numeroItemDuimp INTEGER'
+            'numeroItemDuimp INTEGER',
+            'table_json JSON'
         ]
         
         # Colunas dinâmicas para tributos
@@ -196,6 +274,21 @@ class ItensDatabaseHandler:
         
         self.cursor.execute(create_query)
         self.conn.commit()
+    
+    def update_table_json(self):
+        """Atualiza o campo table_json com o JSON completo da tabela"""
+        try:
+            table_json = get_table_json(self.db_path, 'itens_data', exclude_columns=['table_json'])
+            
+            if table_json:
+                self.cursor.execute("UPDATE itens_data SET table_json = ?", (table_json,))
+                self.conn.commit()
+                print("✅ Campo table_json atualizado com sucesso!")
+            else:
+                print("❌ Não foi possível gerar o JSON da tabela")
+                
+        except Exception as e:
+            print(f"❌ Erro ao atualizar table_json: {e}")
     
     def calculate_peso_percentual(self):
         try:
@@ -272,6 +365,9 @@ class ItensDatabaseHandler:
         # Calcula o peso percentual após inserir todos os dados
         if inserted_count > 0:
             self.calculate_peso_percentual()
+            
+            # Atualiza o campo table_json com o JSON completo da tabela
+            self.update_table_json()
         
         return inserted_count
     
@@ -287,20 +383,24 @@ class ItensDatabaseHandler:
                 col_type = col[2]
                 
                 # Define ícones específicos para cada tipo de coluna
-                if col_name in ['adicaoNumero', 'numeroItemAdicao', 'numeroItemDuimp']:
-                    icon = "🔥"  # Novos campos
-                elif col_name in ['id', 'data_insercao']:
-                    icon = "⏰"  # Campos de sistema
+                if col_name == 'table_json':
+                    icon = "🗂️"  # Ícone para o campo table_json
+                elif col_name == 'codigoFornLOGIX':
+                    icon = "🏷️"
+                elif col_name in ['adicaoNumero', 'numeroItemAdicao', 'numeroItemDuimp']:
+                    icon = "🔥"
+                elif col_name in ['id', 'dataInsercao']:
+                    icon = "⏰"
                 elif any(tributo in col_name for tributo in ['II_', 'IPI_', 'PIS_', 'COFINS_', 'TAXA_']):
-                    icon = "💰"  # Campos de tributos
+                    icon = "💰"
                 elif 'peso' in col_name.lower():
-                    icon = "⚖️"  # Campos de peso
+                    icon = "⚖️"
                 elif 'valor' in col_name.lower() or 'brl' in col_name.lower():
-                    icon = "💵"  # Campos monetários
+                    icon = "💵"
                 elif 'descricao' in col_name.lower():
-                    icon = "📝"  # Descrições
+                    icon = "📝"
                 else:
-                    icon = "✅"  # Demais campos
+                    icon = "✅"
                 
                 print(f"  {icon} {col_name:38} {col_type}")
             
@@ -311,6 +411,48 @@ class ItensDatabaseHandler:
         except sqlite3.Error as e:
             print(f"❌ Erro ao obter estrutura: {e}")
             return []
+    
+    def get_table_json_content(self):
+        """Retorna o conteúdo do table_json do primeiro registro"""
+        try:
+            self.cursor.execute("SELECT table_json FROM itens_data LIMIT 1")
+            result = self.cursor.fetchone()
+            if result and result[0]:
+                table_json_data = json.loads(result[0])
+                
+                # Mostra a estrutura de forma organizada
+                print(f"\n🗂️ ESTRUTURA DO TABLE_JSON:")
+                print(f"   📋 Tabela: {table_json_data.get('metadata', {}).get('table_name')}")
+                
+                # Mostra o primeiro registro de forma limpa
+                records = table_json_data.get('data', [])
+                if records:
+                    print(f"\n   📝 PRIMEIRO REGISTRO:")
+                    first_record = records[0]
+                    
+                    # Ordem específica dos campos principais
+                    main_fields = [
+                        'id', 'dataInsercao', 'duimpNumero', 'duimpVersao',
+                        'codigoProduto', 'ncmProduto', 'codigoExportador', 'codigoFornLOGIX',
+                        'quantidadeItem', 'pesoLiquido', 'pesoPercentual', 'valorBRL'
+                    ]
+                    
+                    for field in main_fields:
+                        if field in first_record:
+                            value = first_record[field]
+                            if field == 'codigoFornLOGIX':
+                                icon = "🏷️"
+                            elif field == 'table_json':
+                                icon = "🗂️"
+                            else:
+                                icon = "✅"
+                            print(f"      {icon} {field}: {value}")
+                
+                return table_json_data
+            return None
+        except sqlite3.Error as e:
+            print(f"❌ Erro ao buscar table_json: {e}")
+            return None
     
     def get_statistics(self, json_data):
         """Retorna estatísticas dos dados processados"""
@@ -369,7 +511,7 @@ def process_json_file(json_file_path):
             print("❌ O JSON não é uma lista de itens!")
             return None        
        
-        db = ItensDatabaseHandler('itens_data.db')
+        db = ItensDatabaseHandler('duimp_itens.db')
         
         # Insere os dados
         inserted_count = db.insert_data(data)
@@ -384,6 +526,16 @@ def process_json_file(json_file_path):
             print(f"   ✅ Itens processados: {inserted_count}/{len(data)}")
             print(f"   💰 Total valor BRL: R$ {stats['total_valor_brl']:,.2f}")
             print(f"   💰 Total valor aduaneiro: R$ {stats['total_valor_aduaneiro']:,.2f}")
+            
+            # Mostra alguns exemplos de codigoFornLOGIX
+            print(f"\n🔍 EXEMPLOS DE codigoFornLOGIX:")
+            db.cursor.execute("SELECT codigoExportador, codigoFornLOGIX FROM itens_data LIMIT 5")
+            exemplos = db.cursor.fetchall()
+            for codigo_exportador, codigo_forn_logix in exemplos:
+                print(f"   📦 {codigo_exportador} → 🏷️ {codigo_forn_logix}")
+            
+            # Mostra o conteúdo do table_json
+            db.get_table_json_content()
         
         db.close()
         return inserted_count

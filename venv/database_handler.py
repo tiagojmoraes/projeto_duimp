@@ -1,4 +1,3 @@
-# database_handler.py
 import sqlite3
 import json
 import os
@@ -21,6 +20,7 @@ class DatabaseHandler:
             dataRegistro TEXT,
             chaveAcesso TEXT,
             cnpjImportador TEXT,
+            codFilial TEXT,
             canalParametrizacao TEXT,
             tipoIdentificacaoCarga TEXT,
             cargaIdentificacao TEXT,
@@ -29,7 +29,6 @@ class DatabaseHandler:
             freteMoedaNegociada TEXT,
             freteValorNegociada REAL,
             valorMercadoriaBRL REAL,
-            codFilial TEXT,
             table_json JSON
         )
         """
