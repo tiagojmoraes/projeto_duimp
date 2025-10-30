@@ -21,9 +21,8 @@ def save_response_to_file():
     end_point = os.getenv('END_POINT')
     duimp_number = os.getenv('DUIMP')
     duimp_version = os.getenv('DUIMP_VERSION')
-    # url = f"{end_point}/{duimp_number}/{duimp_version}" # Consultar DUIMP já registrada - FUNCIONA
-    url = f"{end_point}/{duimp_number}/{duimp_version}/itens" # Consultar os itens de uma DUIMP já registrada - FUNCIONA
-    # url = f"{end_point}/{duimp_number}/{duimp_version}/valores-calculados" # Consultar valores calculados da  - NÃO FUNCIONA
+    url = f"{end_point}/{duimp_number}/{duimp_version}" # Consultar DUIMP já registrada - FUNCIONA
+    # url = f"{end_point}/{duimp_number}/{duimp_version}/itens" # Consultar os itens de uma DUIMP já registrada - FUNCIONA
     # url = f"{end_point}/{duimp_number}/{duimp_version}/diagnosticos" # Obter dados do diagnostico da DUIMP - FUNCIONA
     # url = f"{end_point}/{duimp_number}/versoes" # Consultar a versão de uma DUIMP já  - FUNCIONA
     
